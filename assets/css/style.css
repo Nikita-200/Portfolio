@@ -1236,6 +1236,12 @@ section {
   opacity: 1;
 }
 
+.customheight{
+  height: 400px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image covers the area without distorting */
+  width: 100%; /* Ensures the image maintains the width of the container */
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
