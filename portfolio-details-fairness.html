@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Bias Analysis in Stop-and-Frisk Data</title>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/fairness-analysis-1.jpg" alt="Demographic Disparity Analysis" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/fairness-analysis-1.jpg" class="glightbox zoominn" data-gallery="gallery-fairness" title="Analysis of TPR/FPR disparities across race and gender">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/fairness-analysis-2.jpg" alt="Fairness Interventions" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/fairness-analysis-2.jpg" class="glightbox zoominn" data-gallery="gallery-fairness" title="Comparison of Dataset-based, In-processing, and Post-processing interventions">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/fairness-analysis-3.jpg" alt="Model Performance Results" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/fairness-analysis-3.jpg" class="glightbox zoominn" data-gallery="gallery-fairness" title="Balanced Accuracy improvement from 0.68 to 0.71 with fair modeling">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev" style="color: #34b7a7;"></div>
+              <div class="swiper-button-next" style="color: #34b7a7;"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Responsible AI / Data Science</li>
+                <li><strong>Project duration</strong>: Jan '25 - Mar '25</li>
+                <li><strong>Team size</strong>: 3</li>
+                <li><strong>Dataset</strong>: NYPD Stop-Question-and-Frisk (2003-2024)</li>
+                <li><strong>Github URL</strong>: <a href="https://github.com/Nikita-200/Course_Projects/tree/main/CSE_291J_Fairness_and_Bias_in_ML">Stop-and-Frisk Bias Analysis</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Freeze! Is This Model Fair?</h2>
+              <h5><strong>Technology(s) Used</strong>: Scikit-learn, Fairness Indicators, Platt Scaling, Random Forest, AdaBoost, Python</h5>
+              <p>
+                <ul>
+                  <li><strong>Objective:</strong> Analyzed over two decades of NYPD stop-and-frisk data to detect and mitigate predictive bias in arrest outcomes across sensitive demographics (race, gender, and age).</li>
+                  <li><strong>Fairness Interventions:</strong> Evaluated a multi-level approach including <em>preferential sampling</em> (dataset-level), <em>sensitive attribute adjustment</em> (in-processing), and <em>Platt scaling</em> (post-processing) to enforce equalized odds.</li>
+                  <li><strong>Modeling:</strong> Built robust classifiers using Logistic Regression, Random Forest, and AdaBoost, focusing on balanced accuracy and demographic parity metrics.</li>
+                  <li><strong>Results:</strong> The post-processing + Random Forest pipeline emerged as the best performer, increasing balanced accuracy from 0.68 to 0.71 while achieving significantly more equitable TPR/FPR across groups.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: false 
+    });
+
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+
+</body>
+</html>

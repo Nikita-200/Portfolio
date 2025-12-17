@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Forgetful Memory Machines</title>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/hopfield-cifar.jpg" alt="CIFAR-10 Reconstruction" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/hopfield-cifar.jpg" class="glightbox zoominn" data-gallery="gallery-hopfield" title="Associative Memory: CIFAR-10 image reconstruction from corrupted inputs">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/hopfield-spiking.jpg" alt="Spiking Neural Network" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/hopfield-spiking.jpg" class="glightbox zoominn" data-gallery="gallery-hopfield" title="Spiking Hopfield Network using Izhikevich neuron models">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/hopfield-capacity.jpg" alt="Phase-Space Learning Results" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/hopfield-capacity.jpg" class="glightbox zoominn" data-gallery="gallery-hopfield" title="Capacity Analysis: 600 grayscale images stored with Phase-Space Learning">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev" style="color: #34b7a7;"></div>
+              <div class="swiper-button-next" style="color: #34b7a7;"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Neural Networks / Associative Memory</li>
+                <li><strong>Project duration</strong>: Feb '25 - Mar '25</li>
+                <li><strong>Team size</strong>: 5</li>
+                <li><strong>Dataset</strong>: CIFAR-10 (Binarized & Grayscale)</li>
+                <li><strong>Github URL</strong>: <a href="https://github.com/chenpy2000/Hopfield">Forgetful-Memory-Machines</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Forgetful Memory Machines: Hopfield Networks</h2>
+              <h5><strong>Technology(s) Used</strong>: PyTorch, NumPy, Hebbian Learning, Storkey Learning, Spiking Neural Networks (SNN), Izhikevich Models</h5>
+              <p>
+                <ul>
+                  <li><strong>Advanced Hopfield Variants:</strong> Implemented and compared Hebbian, Storkey, and Phase-Space Learning models to enhance storage capacity and robustness against masked or flipped inputs.</li>
+                  <li><strong>Phase-Space Learning:</strong> Developed models with iterative feedback loops that successfully stored and reconstructed up to 600 grayscale images with high precision.</li>
+                  <li><strong>Biologically Inspired AI:</strong> Designed Spiking Hopfield Networks using Izhikevich neuron models to explore error-correcting abilities in a temporal, spike-based dynamics environment.</li>
+                  <li><strong>Grayscale Encoding:</strong> Experimented with bit-level grayscale encoding and binary thresholding to adapt traditional binarized networks for complex CIFAR-10 data.</li>
+                  <li><strong>Evaluation:</strong> Quantitatively assessed performance using Mean Squared Error (MSE) and network capacity analysis under various corruption levels.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: false 
+    });
+
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+
+</body>
+</html>

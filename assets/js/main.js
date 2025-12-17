@@ -172,8 +172,17 @@
    */
   const portfolioDetailsLightbox = GLightbox({
     selector: '.portfolio-details-lightbox',
+    touchNavigation: false, // Disables swiping to other projects
+    loop: false,
     width: '90%',
-    height: '90vh'
+    height: '90vh',
+    onOpen: () => {
+    const nextBtn = document.querySelector('.gnext');
+    const prevBtn = document.querySelector('.gprev');
+    if (nextBtn) nextBtn.style.display = 'none';
+    if (prevBtn) prevBtn.style.display = 'none';
+  }
+
   });
 
   /**

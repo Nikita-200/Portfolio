@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Conductor App</title>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/conductor-dashboard.jpg" alt="Conductor Dashboard" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/conductor-dashboard.jpg" class="glightbox zoominn" data-gallery="gallery-conductor" title="Instructor Dashboard: Course Management and Attendance Analytics">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/conductor-qr.jpg" alt="QR Attendance" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/conductor-qr.jpg" class="glightbox zoominn" data-gallery="gallery-conductor" title="Automated QR Attendance System for Students">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/conductor-journal.jpg" alt="Work Journal" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/conductor-journal.jpg" class="glightbox zoominn" data-gallery="gallery-conductor" title="Student Work Journal: Daily Check-ins with Sentiment Analysis">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev" style="color: #34b7a7;"></div>
+              <div class="swiper-button-next" style="color: #34b7a7;"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Full Stack Web Development</li>
+                <li><strong>Role</strong>: Full Stack Developer</li>
+                <li><strong>Project duration</strong>: 5 Weeks (Rapid Development)</li>
+                <li><strong>Team size</strong>: 10</li>
+                <li><strong>Github URL</strong>: <a href="https://github.com/CSE210-fa25-team10/conductor_app">Conductor App Repository</a></li>
+               </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Conductor: Classroom Orchestration App</h2>
+              <h5><strong>Technology(s) Used</strong>: HTML, CSS, JS, Node.js (v24), Express (v5.1), PostgreSQL, Docker, AWS EC2, Figma</h5>
+              <p>
+                <ul>
+                  <li><strong>The Problem:</strong> Addressed the administrative burden in large software engineering classes by automating attendance tracking, scattered communication, and group work evaluation.</li>
+                  <li><strong>Core Features:</strong> Developed a role-based system (Student, Instructor, TA, Team Lead) with OAuth 2.0 integration. Features include QR-based/PIN attendance, assignment publishing, and anonymous feedback loops.</li>
+                  <li><strong>Innovation:</strong> Implemented a "Standup Tool" work journal for students, allowing daily check-ins with sentiment pulses to track personal and team morale over time.</li>
+                  <li><strong>DevOps & Infrastructure:</strong> Utilized Docker for environment consistency and deployed via EC2 instances. Coordinated with a 10-person team using JIRA and Retrium for agile retrospectives.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: false 
+    });
+
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+
+</body>
+</html>

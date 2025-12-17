@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Artificial Brains</title>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mri-gen-1.jpg" alt="Synthetic MRI Generation" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/mri-gen-1.jpg" class="glightbox zoominn" data-gallery="gallery-mri" title="Synthetic Brain MRI Scans across T1C, T1N, T2W, and T2-FLAIR modalities">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mri-gen-2.jpg" alt="3D WGAN-GP Results" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/mri-gen-2.jpg" class="glightbox zoominn" data-gallery="gallery-mri" title="Volumetric consistency in 3D WGAN-GP (FID: 37.23)">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/mri-gen-3.jpg" alt="Diffusion Model Outputs" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/mri-gen-3.jpg" class="glightbox zoominn" data-gallery="gallery-mri" title="Conditional Diffusion Model: Structural fidelity and anatomical detail (SSIM: 0.84)">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev" style="color: #34b7a7;"></div>
+              <div class="swiper-button-next" style="color: #34b7a7;"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Medical AI / Deep Learning</li>
+                <li><strong>Project duration</strong>: Apr '25 - Jun '25</li>
+                <li><strong>Team size</strong>: 2</li>
+                <li><strong>Dataset</strong>: BraTS 2023 (Brain Tumor Segmentation)</li>
+                <li><strong>Github URL</strong>: <a href="https://github.com/Nikita-200/Artificial-Brains-Crafting-Synthetic-Brain-MRIs">Artificial Brains Repository</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Artificial Brains: Synthetic Brain MRI Generation</h2>
+              <h5><strong>Technology(s) Used</strong>: GANs (DCGAN, WGAN-GP, UNet-GAN), 3D Deep Learning, Conditional Diffusion Models, PyTorch</h5>
+              <p>
+                <ul>
+                  <li><strong>Objective:</strong> Addressed limited brain tumor MRI datasets by generating synthetic scans across four modalities (T1C, T1N, T2W, T2-FLAIR) to enhance clinical research capabilities.</li>
+                  <li><strong>Modeling & Innovation:</strong> Implemented and compared multiple generative architectures. Developed a 3D WGAN-GP for volumetric consistency and a conditional diffusion model guided by segmentation masks for high structural fidelity.</li>
+                  <li><strong>Preprocessing:</strong> Standardized 3D MRI volumes through normalization and targeted slice selection focusing on high tumor presence.</li>
+                  <li><strong>Evaluation:</strong> Achieved high-fidelity results with 3D WGAN-GP (FID 37.23, PSNR 26.99) and Diffusion models (SSIM 0.84), ensuring anatomical coherence and realism.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: false 
+    });
+
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+
+</body>
+</html>

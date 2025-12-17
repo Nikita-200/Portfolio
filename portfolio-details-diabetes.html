@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Diabetes Risk Prediction</title>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/diabetes-eda.jpg" alt="Exploratory Data Analysis" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/diabetes-eda.jpg" class="glightbox zoominn" data-gallery="gallery-diabetes" title="Exploratory Data Analysis: Correlation heatmaps and feature distributions">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/diabetes-importance.jpg" alt="Feature Importance" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/diabetes-importance.jpg" class="glightbox zoominn" data-gallery="gallery-diabetes" title="Random Forest Feature Importance: Identifying top 7 predictive indicators">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/diabetes-metrics.jpg" alt="Model Evaluation" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/diabetes-metrics.jpg" class="glightbox zoominn" data-gallery="gallery-diabetes" title="Performance Metrics: Confusion matrices and ROC curves showing 88.79% accuracy">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev" style="color: #34b7a7;"></div>
+              <div class="swiper-button-next" style="color: #34b7a7;"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Machine Learning / Healthcare Analytics</li>
+                <li><strong>Project duration</strong>: Sep '24 - Dec '24</li>
+                <li><strong>Team size</strong>: 3</li>
+                <li><strong>Dataset</strong>: CDC BRFSS (253,680 samples)</li>
+                <li><strong>Github URL</strong>: <a href="#">Diabetes Risk Repo</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Diabetes Risk Prediction</h2>
+              <h5><strong>Technology(s) Used</strong>: Python, Scikit-learn, Pandas, GridSearchCV, Random Forest, SVM, SMOTE </h5>
+              <p>
+                <ul>
+                  <li><strong>Data Engineering:</strong> Cleaned and processed the massive CDC BRFSS dataset. Addressed significant class imbalance using oversampling techniques to ensure the minority (diabetes/prediabetes) class was properly represented.</li>
+                  <li><strong>Feature Selection:</strong> Conducted multi-collinearity analysis and used Random Forest Gini importance to distill 21 variables down to 7 key health indicators, optimizing model efficiency.</li>
+                  <li><strong>Model Development:</strong> Implemented and compared Logistic Regression, SVM, Random Forest, and KNN. Utilized GridSearchCV for hyperparameter tuning and cross-validation to prevent overfitting.</li>
+                  <li><strong>Performance:</strong> Achieved an <strong>88.79% accuracy</strong> and <strong>89.24% precision</strong>. The model provides a reliable framework for early screening based on behavioral and health metrics.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: false 
+    });
+
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+
+</body>
+</html>

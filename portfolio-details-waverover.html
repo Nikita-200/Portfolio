@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - WaveRover Navigation & SLAM</title>
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/waverover-nav.jpg" alt="WaveRover Navigation" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/waverover-nav.jpg" class="glightbox zoominn" data-gallery="gallery-rover" title="Waypoint Navigation & Trajectory Visualization">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/waverover-slam.jpg" alt="EKF SLAM" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/waverover-slam.jpg" class="glightbox zoominn" data-gallery="gallery-rover" title="EKF SLAM with Landmark Estimation">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/waverover-path.jpg" alt="A* Path Planning" height="600px">
+                  <div class="portfolio-info card-body">            
+                    <div class="portfolio-links">
+                      <a href="./assets/img/portfolio/waverover-path.jpg" class="glightbox zoominn" data-gallery="gallery-rover" title="A* Grid-Based Path Planning">Zoom In</a>
+                    </div> 
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev" style="color: #34b7a7;"></div>
+              <div class="swiper-button-next" style="color: #34b7a7;"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Robotics & Autonomy</li>
+                <li><strong>Project duration</strong>: Sep '25 - Dec '25</li>
+                <li><strong>Team size</strong>: 2</li>
+                <li><strong>Key Areas</strong>: SLAM, Navigation, Path Planning</li>
+                <li><strong>Github URL</strong>: <a href="#">WaveRover Repository</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>WaveRover: Navigation, SLAM and Coverage</h2>
+              <h5><strong>Technology(s) Used</strong>: EKF (Kalman Filter), A* Search, YOLO, AprilTags, Computer Vision, Subsumption Architecture</h5>
+              <p>
+                <ul>
+                  <li><strong>Waypoint Navigation & Visual Servoing:</strong> Developed a closed-loop controller for a wheeled robot using visual feedback. Performed camera calibration and distortion correction to improve pose estimation accuracy using AprilTags.</li>
+                  <li><strong>SLAM Implementation:</strong> Built an EKF Kalman filter-based SLAM system to estimate robot pose and YOLO-detected landmark positions, utilizing Mahalanobis gating for data association.</li>
+                  <li><strong>Path Planning:</strong> Designed grid-based A* algorithms focused on two distinct behaviors: Maximum Safety and Minimum Time/Distance.</li>
+                  <li><strong>Autonomous Coverage:</strong> Engineered a "Roomba-like" modular subsumption-based architecture for efficient area coverage and obstacle avoidance.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: false 
+    });
+
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+
+</body>
+</html>
