@@ -34,6 +34,73 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    /* 1. Force all columns in a row to match height */
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* 2. Make the card fill the full height of the column */
+    .portfolio-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .portfolio-item .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 3px solid #1101a5;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* 3. Standardize Image Aspect Ratio (16:9 or 4:3) */
+    .portfolio-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 65%; /* Consistent height for all images */
+      overflow: hidden;
+      background: #f8f8f8;
+    }
+
+    .portfolio-wrap img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Crops image to fill the box without stretching */
+    }
+
+    /* 4. Align text content so titles and tools stay uniform */
+    .portfolio-content {
+      padding: 20px;
+      flex-grow: 1; /* Pushes content to fill the card */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+    }
+
+    .portfolio-content h4 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      min-height: 3rem; /* ensures titles stay aligned even if one is longer */
+    }
+
+    .portfolio-content p {
+      margin-top: auto; /* Pushes "Tools & Methods" to the bottom */
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -87,8 +154,14 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details-mri.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Artificial Brains: Synthetic Brain MRI Generation" style="color: inherit; text-decoration: none; display: block; position: relative;">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details-mri.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Artificial Brains: Synthetic Brain MRI Generation" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/mri.gif" class="img-fluid" alt="Artificial Brains: Synthetic Brain MRI Generation" />
@@ -100,16 +173,22 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Artificial Brains: Synthetic Brain MRI Generation</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Tools & Methods:</span> PyTorch, GANs, Diffusion Models
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Artificial Brains: Synthetic Brain MRI Generation
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Tools & Methods:</span> 
+                     PyTorch, GANs, Diffusion Models
                   </p>
                 </div>
 
               </a>
-           </div>
+            </div>
+          </div>
 
+         
           <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
             <div class="portfolio-wrap">
               <img src="./assets/img/mri.gif" class="img-fluid customheight" alt="Synthetic Brain MRI" />
@@ -123,8 +202,14 @@
             <p style="text-align: center;"><span style="font-weight: bold;">Tools & Methods:</span> PyTorch, GANs, Diffusion Models</p>
           </div> -->
 
-          <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details-waverover.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="WaveRover Robot: Navigation, SLAM & Coverage" style="color: inherit; text-decoration: none; display: block; position: relative;">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details-waverover.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="WaveRover Robot: Navigation, SLAM & Coverage" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/waverover.gif" class="img-fluid" alt="WaveRover Robot: Navigation, SLAM & Coverage" />
@@ -136,15 +221,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">WaveRover Robot: Navigation, SLAM & Coverage</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Tools & Methods:</span> Python, ROS2, SLAM, YOLO, AprilTags
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    WaveRover Robot: Navigation, SLAM & Coverage
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Tools & Methods:</span> 
+                     Python, ROS2, SLAM, YOLO, AprilTags
                   </p>
                 </div>
 
               </a>
-           </div>
+            </div>
+          </div>
 
           <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
             <div class="portfolio-wrap">
@@ -159,8 +249,14 @@
             <p style="text-align: center;"><span style="font-weight: bold;">Tools & Methods:</span> Python, ROS2, SLAM, YOLO, AprilTags</p>
           </div> -->
 
-          <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details-music.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Symbolic Music Generation: LSTM & Transformer VAE" style="color: inherit; text-decoration: none; display: block; position: relative;">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details-music.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Symbolic Music Generation: LSTM & Transformer VAE" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/music.gif" class="img-fluid" alt="Symbolic Music Generation: LSTM & Transformer VAE" />
@@ -172,15 +268,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Symbolic Music Generation: LSTM & Transformer VAE</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Tools & Methods:</span> PyTorch, LSTM, Transformers, VAE</span>
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Symbolic Music Generation: LSTM & Transformer VAE
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Tools & Methods:</span> 
+                     PyTorch, LSTM, Transformers, VAE
                   </p>
                 </div>
 
               </a>
-           </div>
+            </div>
+          </div>
 
           <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
             <div class="portfolio-wrap">
@@ -195,8 +296,14 @@
             <p style="text-align: center;"><span style="font-weight: bold;">Tools & Methods:</span> PyTorch, LSTM, Transformers, VAE</p>
           </div> -->
 
-          <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details-hopfield.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Forgetful Memory Machines: Hopfield Improvements" style="color: inherit; text-decoration: none; display: block; position: relative;">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details-hopfield.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Forgetful Memory Machines: Hopfield Improvements" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/hopfield.gif" class="img-fluid" alt="Forgetful Memory Machines: Hopfield Improvements" />
@@ -208,15 +315,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Forgetful Memory Machines: Hopfield Improvements</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Tools & Methods:</span> PyTorch, Hopfield Networks, Spiking Neural Networks, Phase-Space Learning
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Forgetful Memory Machines: Hopfield Improvements
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Tools & Methods:</span> 
+                     PyTorch, Hopfield Networks, Spiking Neural Networks, Phase-Space Learning
                   </p>
                 </div>
 
               </a>
-           </div>
+            </div>
+          </div>
 
           <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
             <div class="portfolio-wrap">
@@ -231,8 +343,14 @@
             <p style="text-align: center;"><span style="font-weight: bold;">Tools & Methods:</span> PyTorch, Hopfield Networks, Spiking Neural Networks, Phase-Space Learning</p>
           </div> -->
 
-          <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details-multimodal.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Multimodal Sentiment & Emotion Analysis (DFG)" style="color: inherit; text-decoration: none; display: block; position: relative;">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details-multimodal.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Multimodal Sentiment & Emotion Analysis (DFG)" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/dfg.gif" class="img-fluid" alt="Multimodal Sentiment & Emotion Analysis (DFG)" />
@@ -244,15 +362,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Multimodal Sentiment & Emotion Analysis (DFG)</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Tools & Methods:</span> PyTorch, LSTM, Multimodal Fusion models, NumPy
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Multimodal Sentiment & Emotion Analysis (DFG)
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Tools & Methods:</span> 
+                     PyTorch, LSTM, Multimodal Fusion models, NumPy
                   </p>
                 </div>
 
               </a>
-           </div>
+            </div>
+          </div>
 
           <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
             <div class="portfolio-wrap">
@@ -267,8 +390,14 @@
             <p style="text-align: center;"><span style="font-weight: bold;">Tools & Methods:</span> PyTorch, LSTM, Multimodal Fusion models, NumPy</p>
           </div> -->
 
-          <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details-conductor.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Conductor App" style="color: inherit; text-decoration: none; display: block; position: relative;">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details-conductor.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Conductor App" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/conductor.gif" class="img-fluid" alt="Conductor App" />
@@ -280,15 +409,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Conductor App</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Tools & Methods:</span> HTML, CSS, JS, Node.js, Express.js, PostgreSQL, Docker, Jest, Playwright
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Conductor App
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Tools & Methods:</span> 
+                    HTML, CSS, JS, Node.js, Express.js, PostgreSQL, Docker, Jest, Playwright
                   </p>
                 </div>
 
               </a>
-           </div>
+            </div>
+          </div>
 
           <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
             <div class="portfolio-wrap">
@@ -303,8 +437,14 @@
             <p style="text-align: center;"><span style="font-weight: bold;">Tools & Methods:</span> PyTorch, LSTM, Multimodal Fusion models, NumPy</p>
           </div> -->
 
-          <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details-fairness.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Freeze! Is This Model Fair? Bias Analysis" style="color: inherit; text-decoration: none; display: block; position: relative;">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details-fairness.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Freeze! Is This Model Fair? Bias Analysis" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/fairness.gif" class="img-fluid" alt="Freeze! Is This Model Fair? Bias Analysis" />
@@ -316,15 +456,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Freeze! Is This Model Fair? Bias Analysis</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Tools & Methods:</span> Python, Scikit-Learn, Pandas, NumPy, Fairness Interventions
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Freeze! Is This Model Fair? Bias Analysis
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Tools & Methods:</span> 
+                    Python, Scikit-Learn, Pandas, NumPy, Fairness Interventions
                   </p>
                 </div>
 
               </a>
-           </div>
+            </div>
+          </div>
 
           <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
             <div class="portfolio-wrap">
@@ -339,11 +484,17 @@
             <p style="text-align: center;"><span style="font-weight: bold;">Tools & Methods:</span> Python, Scikit-Learn, Pandas, NumPy, Fairness Interventions</p>
           </div> -->
 
-          <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details-diabetes.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Diabetes Risk Prediction (CDC BRFSS Dataset)" style="color: inherit; text-decoration: none; display: block; position: relative;">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details-diabetes.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Diabetes Risk Prediction" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
-                  <img src="./assets/img/diabetes.gif" class="img-fluid" alt="Diabetes Risk Prediction (CDC BRFSS Dataset)" />
+                  <img src="./assets/img/diabetes.gif" class="img-fluid" alt="Diabetes Prediction" />
                   
                   <div class="portfolio-info" style="opacity: 1;"> 
                     <div class="portfolio-links">
@@ -352,16 +503,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Diabetes Risk Prediction (CDC BRFSS Dataset)</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Tools & Methods:</span> Python, Scikit-Learn, Pandas, NumPy, Matplotlib, Random Forest, SVM, GridSearchCV
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Diabetes Risk Prediction (CDC BRFSS Dataset)
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Tools & Methods:</span> 
+                    Python, Scikit-Learn, Pandas, NumPy, Matplotlib, Random Forest, SVM, GridSearchCV
                   </p>
                 </div>
 
               </a>
-           </div>
-
+            </div>
+          </div>
           <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
             <div class="portfolio-wrap">
               <img src="./assets/img/diabetes.gif" class="img-fluid customheight" alt="Diabetes Prediction" />
@@ -383,10 +538,17 @@
           </div>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">      
-
-            <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Face Recognition Based Attendance System for Classroom Environment" style="color: inherit; text-decoration: none; display: block; position: relative;">
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">  
+          
+          
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Face Recognition Based Attendance System for Classroom Environment" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/out1.gif" class="img-fluid" alt="Face Recognition Based Attendance System for Classroom Environment" />
@@ -398,15 +560,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Face Recognition Based Attendance System for Classroom Environment</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Technology(s) Used:</span> ML, Flask, Tensorflow, OpenCV, ReactJS, SQLite
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Face Recognition Based Attendance System for Classroom Environment
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Technology(s) Used:</span> 
+                     ML, Flask, Tensorflow, OpenCV, ReactJS, SQLite
                   </p>
                 </div>
 
               </a>
             </div>
+          </div>
 
             <!-- <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
 
@@ -423,12 +590,17 @@
               <p style="text-align: center;"><span style="font-weight: bold;">Technology(s) Used:</span> ML, Flask, Tensorflow, OpenCV, ReactJS, SQLite </p>
             </div> -->
 
-
-            <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details1.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Job Advisor Portal" style="color: inherit; text-decoration: none; display: block; position: relative;">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details1.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Job Advisor Portal" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
-                  <img src="./assets/img/job.gif" class="img-fluid" alt="Job Advisor Portal" />
+                  <img src="./assets/img/job1.gif" class="img-fluid" alt="Job Advisor Portal" />
                   
                   <div class="portfolio-info" style="opacity: 1;"> 
                     <div class="portfolio-links">
@@ -437,15 +609,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Job Advisor Portal</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Technology(s) Used:</span> AI, ML, NLP, Flask, ReactJS, SQLite
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Job Advisor Portal
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Technology(s) Used:</span> 
+                     AI, ML, NLP, Flask, ReactJS, SQLite
                   </p>
                 </div>
 
               </a>
             </div>
+          </div>
 
 
             <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
@@ -461,8 +638,14 @@
               <p style="text-align: center;"><span style="font-weight: bold;">Technology(s) Used:</span> AI, ML, NLP, Flask, ReactJS, SQLite </p>
             </div> -->
 
-            <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card mb-4">
-              <a href="portfolio-details2.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Airline Reservation System" style="color: inherit; text-decoration: none; display: block; position: relative;">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
+            <div class="card h-100">
+              
+              <a href="portfolio-details2.html" 
+                class="portfolio-details-lightbox h-100 d-flex flex-column" 
+                data-glightbox="type: external" 
+                title="Airline Reservation System" 
+                style="color: inherit; text-decoration: none;">
                 
                 <div class="portfolio-wrap">
                   <img src="./assets/img/flightss.gif" class="img-fluid" alt="Airline Reservation System" />
@@ -474,15 +657,20 @@
                   </div>
                 </div>
 
-                <div class="portfolio-content">
-                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">Airline Reservation System</h4>
-                  <p style="text-align: center;">
-                    <span style="font-weight: bold;">Technology(s) Used:</span> ReactJS, Node.js, Express.js, MySQL
+                <div class="portfolio-content d-flex flex-column flex-grow-1">
+                  <h4 style="font-weight: bold; margin-top: 13px; text-align: center;">
+                    Airline Reservation System
+                  </h4>
+                  
+                  <p style="text-align: center; margin-top: auto; padding-top: 10px;">
+                    <span style="font-weight: bold;">Technology(s) Used:</span> 
+                     ReactJS, Node.js, Express.js, MySQL
                   </p>
                 </div>
 
               </a>
             </div>
+          </div>
 
 
             <!-- <div class="card col-lg-4 col-md-6 col-xl-4 col-xxl-4 portfolio-item filter-card">
