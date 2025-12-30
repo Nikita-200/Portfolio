@@ -27,28 +27,28 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fairness-analysis-1.jpg" alt="Demographic Disparity Analysis" height="600px">
+                  <img src="assets/img/portfolio/fairness3.png" alt="Fairness Mitigation Pipeline: Pre-processing, In-processing, and Post-processing Interventions" height="600px">
                   <div class="portfolio-info card-body">            
                     <div class="portfolio-links">
-                      <a href="./assets/img/portfolio/fairness-analysis-1.jpg" class="glightbox zoominn" data-gallery="gallery-fairness" title="Analysis of TPR/FPR disparities across race and gender">Zoom In</a>
+                      <a href="./assets/img/portfolio/fairness3.png" class="glightbox zoominn" data-gallery="gallery-fairness" title="Fairness Mitigation Pipeline: Pre-processing, In-processing, and Post-processing Interventions">Zoom In</a>
                     </div> 
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fairness-analysis-2.jpg" alt="Fairness Interventions" height="600px">
+                  <img src="assets/img/portfolio/fairness1.png" alt="Class Label Distribution: Analyzing Target Imbalance in NYPD Arrest Data" height="600px">
                   <div class="portfolio-info card-body">            
                     <div class="portfolio-links">
-                      <a href="./assets/img/portfolio/fairness-analysis-2.jpg" class="glightbox zoominn" data-gallery="gallery-fairness" title="Comparison of Dataset-based, In-processing, and Post-processing interventions">Zoom In</a>
+                      <a href="./assets/img/portfolio/fairness1.png" class="glightbox zoominn" data-gallery="gallery-fairness" title="Class Label Distribution: Analyzing Target Imbalance in NYPD Arrest Data">Zoom In</a>
                     </div> 
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/fairness-analysis-3.jpg" alt="Model Performance Results" height="600px">
+                  <img src="assets/img/portfolio/fairness2.png" alt="Exploratory Bias Detection: Quantitative Analysis of Demographic Disparities" height="600px">
                   <div class="portfolio-info card-body">            
                     <div class="portfolio-links">
-                      <a href="./assets/img/portfolio/fairness-analysis-3.jpg" class="glightbox zoominn" data-gallery="gallery-fairness" title="Balanced Accuracy improvement from 0.68 to 0.71 with fair modeling">Zoom In</a>
+                      <a href="./assets/img/portfolio/fairness2.png" class="glightbox zoominn" data-gallery="gallery-fairness" title="Exploratory Bias Detection: Quantitative Analysis of Demographic Disparities">Zoom In</a>
                     </div> 
                   </div>
                 </div>
@@ -69,7 +69,14 @@
                 <li><strong>Project duration</strong>: Jan '25 - Mar '25</li>
                 <li><strong>Team size</strong>: 3</li>
                 <li><strong>Dataset</strong>: NYPD Stop-Question-and-Frisk (2003-2024)</li>
-                <li><strong>Github URL</strong>: <a href="https://github.com/Nikita-200/Course_Projects/tree/main/CSE_291J_Fairness_and_Bias_in_ML">Stop-and-Frisk Bias Analysis</a></li>
+                <li><strong>Github URL</strong>: <a href="https://github.com/Nikita-200/Course_Projects/tree/main/CSE_291J_Fairness_and_Bias_in_ML" target="_blank"
+                            rel="noopener noreferrer"
+                            class="no-lightbox"
+                            >Stop-and-Frisk Bias Analysis</a></li>
+                <li><strong>Video Presentation URL</strong>: <a href="https://drive.google.com/file/d/1dg37cmdQRHf68XzNhZ4gHf0Yt6usV4vg/view?usp=sharing" target="_blank"
+                            rel="noopener noreferrer"
+                            class="no-lightbox"
+                            >Video URL</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
@@ -78,8 +85,8 @@
               <p>
                 <ul>
                   <li><strong>Objective:</strong> Analyzed over two decades of NYPD stop-and-frisk data to detect and mitigate predictive bias in arrest outcomes across sensitive demographics (race, gender, and age).</li>
-                  <li><strong>Fairness Interventions:</strong> Evaluated a multi-level approach including <em>preferential sampling</em> (dataset-level), <em>sensitive attribute adjustment</em> (in-processing), and <em>Platt scaling</em> (post-processing) to enforce equalized odds.</li>
-                  <li><strong>Modeling:</strong> Built robust classifiers using Logistic Regression, Random Forest, and AdaBoost, focusing on balanced accuracy and demographic parity metrics.</li>
+                  <li><strong>Fairness Interventions:</strong> Implemented a three-stage fairness pipeline, applying <em>pre-processing</em> techniques such as <em>uniform sampling</em> and <em>preferential sampling</em> to mitigate dataset bias, and <em>post-processing</em> methods including <em>Platt scaling</em> to adjust predictions and enforce <em>equalized odds</em> after model training.</li>
+                  <li><strong>Modeling:</strong> Built robust classifiers using <em>in-processing</em> strategies, training Logistic Regression, Random Forest, and AdaBoost models, and assessed performance using balanced accuracy and demographic parity metrics.</li>
                   <li><strong>Results:</strong> The post-processing + Random Forest pipeline emerged as the best performer, increasing balanced accuracy from 0.68 to 0.71 while achieving significantly more equitable TPR/FPR across groups.</li>
                 </ul>
               </p>

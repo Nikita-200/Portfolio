@@ -13,6 +13,18 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .audio-slide {
+      background: #f8f9fa;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .audio-slide h5 {
+      font-weight: 600;
+      color: #2c2c2c;
+    }
+  </style>
 </head>
 
 <body>
@@ -27,29 +39,37 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/music-gen-1.jpg" alt="LSTM Music Generation" height="600px">
+                  <img src="assets/img/portfolio/music1.png" alt="Correlation between musical features" height="600px">
                   <div class="portfolio-info card-body">            
                     <div class="portfolio-links">
-                      <a href="./assets/img/portfolio/music-gen-1.jpg" class="glightbox zoominn" data-gallery="gallery-music" title="Next-Note Prediction using LSTM Sequence Modeling">Zoom In</a>
+                      <a href="./assets/img/portfolio/music1.png" class="glightbox zoominn" data-gallery="gallery-music" title="Correlation between musical features">Zoom In</a>
                     </div> 
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/music-gen-2.jpg" alt="Transformer VAE Architecture" height="600px">
-                  <div class="portfolio-info card-body">            
-                    <div class="portfolio-links">
-                      <a href="./assets/img/portfolio/music-gen-2.jpg" class="glightbox zoominn" data-gallery="gallery-music" title="Transformer-based Conditional VAE for Harmony Generation">Zoom In</a>
-                    </div> 
+                  <div class="audio-slide text-center p-4">
+                    <h5 class="mb-3">
+                      Symbolic, Unconditional Music Generation using LSTM
+                    </h5>
+
+                    <audio controls preload="none" style="width: 100%;">
+                      <source src="assets/img/portfolio/symbolic_unconditioned.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/music-gen-3.jpg" alt="Melody and Harmony Alignment" height="600px">
-                  <div class="portfolio-info card-body">            
-                    <div class="portfolio-links">
-                      <a href="./assets/img/portfolio/music-gen-3.jpg" class="glightbox zoominn" data-gallery="gallery-music" title="Qualitative evaluation of musicality and rhythmic consistency">Zoom In</a>
-                    </div> 
+                  <div class="audio-slide text-center p-4">
+                    <h5 class="mb-3">
+                      Symbolic, Conditional Music Generation using VAE
+                    </h5>
+
+                    <audio controls preload="none" style="width: 100%;">
+                      <source src="assets/img/portfolio/symbolic_conditioned.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
                   </div>
                 </div>
 
@@ -69,7 +89,14 @@
                 <li><strong>Project duration</strong>: Apr '25 - Jun '25</li>
                 <li><strong>Team size</strong>: 3</li>
                 <li><strong>Dataset</strong>: GiantMIDI-Piano (10,855 MIDI files)</li>
-                <li><strong>Github URL</strong>: <a href="https://github.com/Nikita-200/Course_Projects/tree/main/CSE_253_ML_for_Music">Music Generation Repository</a></li>
+                <li><strong>Github URL</strong>: <a href="https://github.com/Nikita-200/Course_Projects/tree/main/CSE_253_ML_for_Music" target="_blank"
+                            rel="noopener noreferrer"
+                            class="no-lightbox"
+                            >Music Generation Repository</a></li>
+                <li><strong>Video Presentation URL</strong>: <a href="https://drive.google.com/file/d/1IP_mKRj5cXlpcbRz2No78n5O78RSrPAQ/view?usp=sharing" target="_blank"
+                  rel="noopener noreferrer"
+                            class="no-lightbox"
+                            >Video URL</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
@@ -102,7 +129,7 @@
       loop: false 
     });
 
-    new Swiper('.portfolio-details-slider', {
+    const swiper = new Swiper('.portfolio-details-slider', {
       speed: 400,
       loop: true,
       autoplay: {
@@ -119,6 +146,36 @@
         prevEl: '.swiper-button-prev',
       }
     });
+
+    // ---- AUDIO ↔ SWIPER INTERACTION ----
+  const audioElements = document.querySelectorAll('.swiper-slide audio');
+
+  audioElements.forEach(audio => {
+    audio.addEventListener('play', () => {
+      swiper.autoplay.stop();
+    });
+
+    audio.addEventListener('pause', () => {
+      swiper.autoplay.start();
+    });
+
+    audio.addEventListener('ended', () => {
+      swiper.autoplay.start();
+    });
+  });
+
+    audio.addEventListener('play', () => {
+    swiper.allowSlideNext = false;
+    swiper.allowSlidePrev = false;
+    swiper.autoplay.stop();
+  });
+
+    audio.addEventListener('pause', () => {
+    swiper.allowSlideNext = true;
+    swiper.allowSlidePrev = true;
+    swiper.autoplay.start();
+  });
+
   </script>
 
 </body>
